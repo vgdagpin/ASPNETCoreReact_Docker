@@ -10,12 +10,15 @@ COPY . .
 WORKDIR "/src/Project1"
 RUN dotnet build "Project1.csproj" -c Release -o /app/build
 
-FROM node:latest AS node_base
-WORKDIR /src/ClientApp
-RUN echo "NODE Version:" && node --version
-RUN echo "NPM Version:" && npm --version
+# Switch to the ClientApp directory within your project
+WORKDIR "/src/Project1/ClientApp"
+
+# Install Node.js and npm within the ClientApp directory
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
 RUN npm install
 
+# Move back to the main project directory before publishing
 WORKDIR "/src/Project1"
 
 FROM build AS publish
