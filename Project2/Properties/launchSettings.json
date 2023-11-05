@@ -1,13 +1,13 @@
 {
   "profiles": {
-    "Project1": {
+    "Project2": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
       },
-      "applicationUrl": "http://localhost:5069"
+      "applicationUrl": "http://localhost:5062"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -31,7 +31,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:28318",
+      "applicationUrl": "http://localhost:51693",
       "sslPort": 0
     }
   }
